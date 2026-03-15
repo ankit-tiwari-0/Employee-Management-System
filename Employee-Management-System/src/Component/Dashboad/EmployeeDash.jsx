@@ -3,7 +3,7 @@ import Header from '../other/Header'
 
 const EmployeeDash = () => {
   return (
-    <div>
+    <div className='p-10 bg-[#1C1C1C] h-screen'>
         <Header />
     </div>
   )
