@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../other/Header'
 
 const EmployeeDash = () => {
   return (
-    <div>EmployeeDash</div>
+    <div>
+        <Header />
+    </div>
   )
 }
 
