@@ -5,8 +5,8 @@ import EmployeeDash from './Component/Dashboad/EmployeeDash'
 const App = () => {
   return (
    <>
-   <Login />
-   {/* <EmployeeDash /> */}
+   {/* <Login /> */}
+   <EmployeeDash />
    </>
   )
 }
