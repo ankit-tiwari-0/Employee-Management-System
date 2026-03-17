@@ -1,27 +1,15 @@
 import React from 'react'
 import Header from '../other/Header'
+import CreateTask from '../other/CreateTask'
 
 const AdminDashboad = () => {
-  return (
-    <div className='h-screen w-full p-10'>
-        <Header />
-        <div>
-            <form>
-                <h3> Task Title</h3>
-                <input type="text" placeholder='make ' />
-                <h3>Description</h3>
-                <textarea name="" id=" " cols="30" rows="10"></textarea>
-                <h3>Date</h3>
-                <input type="text" />
-                <h3>Asign to </h3>
-                <input type="text" placeholder='Employee name' />
-                <h3>Cateogory</h3>
-                <input type="text" placeholder='Design, dev etc' />
-                <button>Create Task</button>
-            </form>
+    return (
+        <div className='min-h-screen w-full p-8 md:p-6 lg:p-10'>
+            <Header />
+            <CreateTask />
+           
         </div>
-    </div>
-  )
+    )
 }
 
 export default AdminDashboad
