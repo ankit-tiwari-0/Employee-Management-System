@@ -6,9 +6,9 @@ import AdminDashboad from './Component/Dashboad/AdminDashboad'
 const App = () => {
   return (
    <>
-   {/* <Login /> */}
+   <Login />
    {/* <EmployeeDash /> */}
-   <AdminDashboad />
+   {/* <AdminDashboad /> */}
    </>
   )
 }

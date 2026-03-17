@@ -24,7 +24,7 @@ const Login = () => {
             onChange={(e) => {
               setgmail(e.target.value)
             }}
-            required className='border-2 border-emerald-500 rounded-full bg-transparent outline-none text-xl py-3 px-5 placeholder:text-gray-400 active:scale-95  hover:bg-pink-100 '
+            required className='border-2 border-emerald-500 rounded-full bg-transparent outline-none text-xl py-3 px-5 placeholder:text-gray-400 active:scale-95 '
             type="email" placeholder='Enter your email' />
           <input
             value={password}
