@@ -1,4 +1,5 @@
 import React from 'react'
+import Alltask from './Alltask'
 
 const CreateTask = () => {
   return (
@@ -38,12 +39,13 @@ const CreateTask = () => {
                             className='w-full h-40 md:h-44 text-sm py-2 px-4 rounded outline-none bg-transparent border-2 border-gray-400'
                         ></textarea>
 
-                        <button className='bg-emerald-500 hover:bg-emerald-600 py-2 md:py-3 px-4 rounded-xl text-sm mt-4 w-full md:w-fit active:scale-50'>
+                        <button className='bg-emerald-500 hover:text-gray-700 font-semibold text-xl hover:bg-emerald-600 py-2 md:py-3 px-4 rounded-xl  mt-4 w-full md:w-fit active:scale-50'>
                             Create Task
                         </button>
                     </div>
 
                 </form>
+                <Alltask />
             </div>
   )
 }
