@@ -1,7 +1,9 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 export const Authcontext = createContext()
 
 const AuthProvider = ({children}) => {
+
+    const [userData, setuserData] = useState('')
   return (
     <div>
         <Authcontext.Provider value={'Ankit'}>
