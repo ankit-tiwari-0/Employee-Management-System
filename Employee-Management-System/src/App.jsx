@@ -9,9 +9,11 @@ const App = () => {
 
   const handleLogin = (email, password)=>{
     if(email == 'admin@me.com' && password == '123'){
+      setuser('admin')
       console.log('This is admin');
       
     } else if (email == 'user@me.com' && password == '123'){
+      setuser('Employee')
       console.log('This is user');
       
     }else{
@@ -20,13 +22,13 @@ const App = () => {
 
   }
 
-  handleLogin('admin@me.com',123)
+  
   
   return (
    <>
-  {!user ?  <Login />: ''}
-   {/* <EmployeeDash /> */}
-   {/* <AdminDashboad /> */}
+    {!user && <Login handleLogin={handleLogin} />}
+    {user == 'admin'?  <AdminDashboad /> :  <EmployeeDash /> }
+  
    </>
   )
 }
