@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Login from './Component/Auth/Login'
 import EmployeeDash from './Component/Dashboad/EmployeeDash'
 import AdminDashboad from './Component/Dashboad/AdminDashboad'
 import { getLocalStorage, setLocalStorage } from './utils/localstorage'
+import { Authcontext } from './Context/AuthProvider'
 
 const App = () => {
   const [user, setuser] = useState(null)
@@ -22,6 +23,8 @@ const App = () => {
 
   }
 
+  const data = useContext(Authcontext)
+  console.log(data);
   
   
   return (
