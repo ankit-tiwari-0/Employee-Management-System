@@ -7,15 +7,30 @@ import { Authcontext } from './Context/AuthProvider'
 
 const App = () => {
   const [user, setuser] = useState(null)
+  const [loggedInUser, setloggedInUser] = useState(null)
   const authdata = useContext(Authcontext)
+  useEffect(() => {
+     const loggedInUsers = localStorage.getItem("loggedInUser")
+      if (loggedInUsers){
+        setuser(loggedInUsers.role)
+      }
+  }, [authdata])
+  
 
   const handleLogin = (email, password)=>{
     if(email == 'admin@me.com' && password == '123'){
       setuser('admin')
+      localStorage.setItem('loggedInUser',JSON.stringify({role:'admin'}))
       
-    } else if (authdata && authdata.employees.find((e)=>email == e.email && e.password == password)){
-      setuser('employee')
-      
+    } else if (authdata){
+      const employee = authdata.employees.find((e)=>email == e.email && e.password == password)
+      if(employee){
+
+        setuser('employee')
+        setloggedInUser(employee)
+         localStorage.setItem('loggedInUser',JSON.stringify({role: 'employee'}))
+        
+      }
     }else{
       alert('Invalid Credential')
     }  
@@ -26,7 +41,7 @@ const App = () => {
   return (
    <>
     {!user && <Login handleLogin={handleLogin} />}
-    {user == 'admin'?  <AdminDashboad /> :  <EmployeeDash /> }
+    {user == 'admin'?  <AdminDashboad /> : (user == employee ?  <EmployeeDash  data ={loggedInUsers} /> : null  )}
   
    </>
   )
