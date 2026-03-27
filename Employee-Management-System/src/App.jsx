@@ -8,14 +8,12 @@ import { Authcontext } from './Context/AuthProvider'
 const App = () => {
   const [user, setuser] = useState(null)
   const authdata = useContext(Authcontext)
-  console.log(authdata);
-  
 
   const handleLogin = (email, password)=>{
     if(email == 'admin@me.com' && password == '123'){
       setuser('admin')
       
-    } else if (email == 'user@me.com' && password == '123'){
+    } else if (authdata && authdata.employees.find((e)=>email == e.email && e.password == password)){
       setuser('employee')
       
     }else{
