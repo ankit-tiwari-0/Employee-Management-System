@@ -6,9 +6,10 @@ import Tasklist2 from '../TaskList/Tasklist2'
 const EmployeeDash = ({data}) => {
   return (
     <div className='p-10 bg-[#1C1C1C] h-screen'>
-        <Header />
-        <TaskList />
-        <Tasklist2 />
+      <h1>{data.id}</h1>
+        <Header data = {data} />
+        <TaskList data = {data} />
+        <Tasklist2  data = {data}/>
     </div>
   )
 }

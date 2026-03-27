@@ -9,12 +9,12 @@ const App = () => {
   const [user, setuser] = useState(null)
   const [loggedInUser, setloggedInUser] = useState(null)
   const authdata = useContext(Authcontext)
-  useEffect(() => {
-     const loggedInUsers = localStorage.getItem("loggedInUser")
-      if (loggedInUsers){
-        setuser(loggedInUsers.role)
-      }
-  }, [authdata])
+  // useEffect(() => {
+  //    const loggedInUsers = JSON.parse(localStorage.getItem("loggedInUser"))
+  //     if (loggedInUsers){
+  //       setuser(loggedInUsers.role)
+  //     }
+  // }, [authdata])
   
 
   const handleLogin = (email, password)=>{
@@ -41,7 +41,7 @@ const App = () => {
   return (
    <>
     {!user && <Login handleLogin={handleLogin} />}
-    {user == 'admin'?  <AdminDashboad /> : (user == employee ?  <EmployeeDash  data ={loggedInUsers} /> : null  )}
+    {user == 'admin'?  <AdminDashboad /> : (user == 'employee' ?  <EmployeeDash  data ={loggedInUser} /> : null  )}
   
    </>
   )
