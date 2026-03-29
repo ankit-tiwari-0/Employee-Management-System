@@ -1,33 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Authcontext } from '../../Context/AuthProvider'
 
 const Alltask = () => {
+  const authdata = useContext(Authcontext)
   return (
     <div id='tasklist' className='bg-[#1c1c1c] p-5 mt-5 rounded-2xl overflow-auto h-20 lg:h-48'>
-        <div className='bg-red-300 hover:bg-red-500  py-2 px-4 flex mb-3 justify-between lg:items-center lg:w-4/5 lg:mx-auto rounded-xl'>
-          <h2>Ankita</h2>
-          <h3>Make a UI Design</h3>
-          <h5>Status</h5>
-        </div>
-        <div className='bg-green-300 hover:bg-green-500 py-2 px-4 flex mb-3 justify-between lg:items-center lg:w-4/5 lg:mx-auto rounded-xl'>
-          <h2>Ankita</h2>
-          <h3>Make a UI Design</h3>
-          <h5>Status</h5>
-        </div>
-        <div className='bg-blue-300 hover:bg-blue-500 py-2 px-4 flex mb-3 justify-between lg:items-center lg:w-4/5 lg:mx-auto rounded-xl'>
-          <h2>Ankita</h2>
-          <h3>Make a UI Design</h3>
-          <h5>Status</h5>
-        </div>
-        <div className='bg-purple-300 hover:bg-purple-500 py-2 px-4 flex mb-3 justify-between lg:items-center lg:w-4/5 lg:mx-auto rounded-xl'>
-          <h2>Ankita</h2>
-          <h3>Make a UI Design</h3>
-          <h5>Status</h5>
-        </div>
-        <div className='bg-pink-600 hover:bg-pink-300 py-2 px-4 flex mb-3 justify-between lg:items-center lg:w-4/5 lg:mx-auto rounded-xl'>
-          <h2>Ankita</h2>
-          <h3>Make a UI Design</h3>
-          <h5>Status</h5>
-        </div>
+      <div className='bg-red-00 py-2 px-2 flex items-center rounded-xl whitespace-nowrap mb-2'>
+  <h2 className='flex-1 px-2 text-[11px] text-center font-bold'>Name</h2>
+  <h3 className='flex-1 px-2 text-[11px] text-center font-bold'>New</h3>
+  <h5 className='flex-1 px-2 text-[11px] text-center font-bold'>Active</h5>
+  <h5 className='flex-1 px-2 text-[11px] text-center font-bold'>Done</h5>
+  <h5 className='flex-1 px-2 text-[11px] text-center font-bold'>Fail</h5>
+</div>
+      <div>
+        {authdata.employees.map(function (elem) {
+          return <div className='border-2 border-emerald-500 py-2 px-2 flex items-center rounded-xl whitespace-nowrap mb-4'>
+  <h2 className='flex-1 px-2 text-[11px] text-center'>{elem.firstName}</h2>
+  <h3 className='flex-1 px-2 text-blue-600 text-[11px] text-center font-medium'>{elem.taskCount.newTask}</h3>
+  <h5 className='flex-1 px-2 text-orange-500 text-[11px] text-center font-medium'>{elem.taskCount.active}</h5>
+  <h5 className='flex-1 px-2 text-white text-[11px] text-center font-medium'>{elem.taskCount.completed}</h5>
+  <h5 className='flex-1 px-2 text-red-700 text-[11px] text-center font-medium'>{elem.taskCount.failed}</h5>
+</div>
+        })}
+      </div>
+
+
+
     </div>
   )
 }

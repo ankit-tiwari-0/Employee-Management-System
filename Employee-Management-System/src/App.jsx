@@ -33,7 +33,7 @@ useEffect(() => {
 }, [])
   
   const handleLogin = (email, password)=>{
-    if(email == 'admin@example.com' && password == '123'){
+    if(email == 'admin@tiwari.com' && password == '123'){
       setuser('admin')
       localStorage.setItem('loggedInUserss',JSON.stringify({role:'admin'}))
       
