@@ -21,7 +21,6 @@ const Tasklist2 = ({data}) => {
                return <FailedTasl key={idx} data={elem}/>
           }
       })}
-      
     </div>
   )
 }
