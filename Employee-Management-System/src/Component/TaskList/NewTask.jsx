@@ -9,6 +9,9 @@ const NewTask = () => {
         </div>
         <h2 className='lg:mt-5 mt-1 text-2xl font-semibold'>Make A Video</h2>
         <p className='text-sm mt-1 lg:mt-3 md:line-clamp-none wrap-break-word line-clamp-3'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates soluta obcaecati vero numquam autem sit.dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <div className='lg:mt-15 m-4'>
+            <button className='bg-green-500'>Accept</button>
+        </div>
         </div> 
   )
 }
