@@ -56,7 +56,7 @@ useEffect(() => {
   return (
    <>
     {!user && <Login handleLogin={handleLogin} />}
-    {user == 'admin'?  <AdminDashboad /> : (user == 'employee' ?  <EmployeeDash  data ={loggedInUser} /> : null  )}
+    {user == 'admin'?  <AdminDashboad changeUser={ setuser} /> : (user == 'employee' ?  <EmployeeDash  changeUser={ setuser} data ={loggedInUser} /> : null  )}
   
    </>
   )
