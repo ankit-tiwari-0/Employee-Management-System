@@ -6,10 +6,16 @@ const CreateTask = () => {
     const [taskDescription, settaskDescription] = useState('')
     const [taskDate, settaskDate] = useState('')
     const [asignTo, setasignTo] = useState('')
-    const [category, setcategory] = useState()
+    const [category, setcategory] = useState('')
+
     const submitHandler = (e) =>{
         e.preventDefault()
-        console.log("task");
+        console.log(taskTitle,taskDate,asignTo,category);
+        setasignTo('')
+        setcategory('')
+        settaskDate('')
+        settaskDate('')
+        settaskDescription('')
         
     }
   return (
@@ -23,22 +29,42 @@ const CreateTask = () => {
                         
                         <div>
                             <h3 className='text-sm text-gray-300 mb-1.5'>Task Title</h3>
-                            <input className='w-full lg:w-4/5 text-sm py-2 px-3 rounded outline-none bg-transparent border-2 border-gray-400' type="text" placeholder='Enter task title' />
+                            <input
+                              value={taskTitle}
+                              onChange={(e)=>{
+                                settaskTitle(e.target.value)
+                              }}
+                            className='w-full lg:w-4/5 text-sm py-2 px-3 rounded outline-none bg-transparent border-2 border-gray-400' type="text" placeholder='Enter task title' />
                         </div>
 
                         <div>
                             <h3 className='text-sm text-gray-300 mb-1.5'>Date</h3>
-                            <input className='w-full lg:w-4/5 text-sm py-2 px-3 rounded outline-none bg-transparent border-2 border-gray-400' type="date" />
+                            <input 
+                             value={taskDate}
+                              onChange={(e)=>{
+                                settaskDate(e.target.value)
+                              }}
+                            className='w-full lg:w-4/5 text-sm py-2 px-3 rounded outline-none bg-transparent border-2 border-gray-400' type="date" />
                         </div>
 
                         <div>
                             <h3 className='text-sm text-gray-300 mb-1.5'>Assign To</h3>
-                            <input className='w-full lg:w-4/5 text-sm py-2 px-3 rounded outline-none bg-transparent border-2 border-gray-400' type="text" placeholder='Employee name' />
+                            <input 
+                             value={asignTo}
+                              onChange={(e)=>{
+                                setasignTo(e.target.value)
+                              }}
+                            className='w-full lg:w-4/5 text-sm py-2 px-3 rounded outline-none bg-transparent border-2 border-gray-400' type="text" placeholder='Employee name' />
                         </div>
 
                         <div>
                             <h3 className='text-sm text-gray-300 mb-1.5'>Category</h3>
-                            <input className='w-full lg:w-4/5 text-sm py-2 px-3 rounded outline-none bg-transparent border-2 border-gray-400' type="text" placeholder='Design, Dev etc' />
+                            <input
+                             value={category}
+                              onChange={(e)=>{
+                                setcategory(e.target.value)
+                              }}
+                            className='w-full lg:w-4/5 text-sm py-2 px-3 rounded outline-none bg-transparent border-2 border-gray-400' type="text" placeholder='Design, Dev etc' />
                         </div>
 
                     </div>
@@ -48,6 +74,10 @@ const CreateTask = () => {
                         <h3 className='text-sm text-gray-300 mb-1.5'>Description</h3>
 
                         <textarea 
+                        value={taskDescription}
+                              onChange={(e)=>{
+                                settaskDescription(e.target.value)
+                              }}
                             className='w-full h-40 md:h-44 text-sm py-2 px-4 rounded outline-none bg-transparent border-2 border-gray-400'
                         ></textarea>
 
