@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Alltask from './Alltask'
 
 const CreateTask = () => {
+    const [taskTitle, settaskTitle] = useState('')
+    const [taskDescription, settaskDescription] = useState('')
+    const [taskDate, settaskDate] = useState('')
+    const [asignTo, setasignTo] = useState('')
+    const [category, setcategory] = useState()
+    const submitHandler = (e) =>{
+        e.preventDefault()
+        console.log("task");
+        
+    }
   return (
     <div className='p-4 md:p-6 bg-[#1c1c1c] mt-10 md:mt-10 rounded-2xl'>
-                <form className='flex flex-col lg:flex-row gap-6 w-full justify-between'>
+                <form onSubmit={(e)=>{
+                    submitHandler(e)
+                }} className='flex flex-col lg:flex-row gap-6 w-full justify-between'>
 
                     {/* LEFT SIDE */}
                     <div className='w-full lg:w-1/2 space-y-4'>
