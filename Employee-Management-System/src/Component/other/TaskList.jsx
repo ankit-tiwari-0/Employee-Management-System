@@ -7,9 +7,9 @@ const TaskList = ({data}) => {
        {/* New Task */}
        <div 
        className='rounded-2xl w-[35%] py-6 px-9 active:scale-95 
-       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-lg border border-white/20'
+       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
        style={{
-         background: "linear-gradient(135deg, #ef4444, #ec4899, #8b5cf6, #f97316, #eab308)"
+         background: "linear-gradient(135deg, #ef4444, #f97316, #eab308)"
        }}>
            <h2 className='text-4xl font-extrabold drop-shadow-lg'>
              {data.taskCount.newTask}
@@ -22,9 +22,9 @@ const TaskList = ({data}) => {
        {/* Completed */}
        <div 
        className='rounded-2xl w-[35%] py-6 px-5 active:scale-95 
-       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-3xl border border-white/20'
+       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
        style={{
-         background: "linear-gradient(135deg, #3b82f6, #06b6d4, #6366f1, #a855f7, #ec4899)"
+         background: "linear-gradient(135deg, #3b82f6, #6366f1, #a855f7)"
        }}>
            <h2 className='text-4xl font-extrabold drop-shadow-lg'>
              {data.taskCount.completed}
@@ -39,7 +39,7 @@ const TaskList = ({data}) => {
        className='rounded-2xl w-[35%] py-6 px-5 active:scale-95 
        text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
        style={{
-         background: "linear-gradient(135deg, #22c55e, #84cc16, #10b981, #14b8a6, #06b6d4)"
+         background: "linear-gradient(135deg, #22c55e, #10b981, #06b6d4)"
        }}>
            <h2 className='text-4xl font-extrabold drop-shadow-lg'>
              {data.taskCount.active}
@@ -54,7 +54,7 @@ const TaskList = ({data}) => {
        className='rounded-2xl w-[35%] py-6 px-6 active:scale-95 
        text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
        style={{
-         background: "linear-gradient(135deg, #facc15, #fb923c, #f87171, #ec4899, #8b5cf6)"
+         background: "linear-gradient(135deg, #facc15, #f87171, #ec4899)"
        }}>
            <h2 className='text-4xl font-extrabold drop-shadow-lg'>
              {data.taskCount.failed}

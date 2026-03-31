@@ -1,43 +1,72 @@
 import React, { useState } from 'react'
 
-const Login = ({handleLogin}) => {
+const Login = ({ handleLogin }) => {
 
   const [gmail, setgmail] = useState('')
   const [password, setpassword] = useState('')
 
   const submitHandler = (e) => {
     e.preventDefault()
-    handleLogin(gmail,password)
-    console.log('submit dale');
+    handleLogin(gmail, password)
     setgmail('')
     setpassword('')
-
   }
+
   return (
-    <div className='flex h-screen w-full lg:w-screen items-center justify-center '>
-      <div className='border-3 rounded-4xl py-12 px-5 lg:p-20  lg:h-1/2  border-emerald-600  '>
-        <form onSubmit={(e) => {
-          submitHandler(e)
-        }}
+    <div className='flex h-screen w-full items-center justify-center 
+    bg-linear-to-br from-black via-gray-900 to-black px-4'>
+
+      <div className='w-full max-w-sm sm:max-w-md md:max-w-lg
+      border border-white/10 rounded-3xl 
+      py-10 px-6 sm:px-10 md:px-12
+      bg-white/5 backdrop-blur-xl shadow-2xl'>
+
+        <form onSubmit={submitHandler}
           className='flex flex-col items-center justify-center'>
 
-          <input value={gmail}
-            onChange={(e) => {
-              setgmail(e.target.value)
-            }}
-            required className='border-2 border-emerald-500 rounded-full bg-transparent outline-none text-xl py-3 px-5 placeholder:text-gray-400 active:scale-95 mb-5 '
-            type="email" placeholder='Enter your email' />
+          {/* Email */}
+          <input
+            value={gmail}
+            onChange={(e) => setgmail(e.target.value)}
+            required
+            className='w-full mb-5 
+            bg-white/10 border border-white/20 
+            rounded-full px-5 py-3 text-white text-base sm:text-lg
+            placeholder:text-white/50 
+            focus:outline-none focus:ring-2 focus:ring-emerald-400
+            transition-all duration-300'
+            type="email"
+            placeholder='Enter your email'
+          />
+
+          {/* Password */}
           <input
             value={password}
-            onChange={(e) => {
-              setpassword(e.target.value)
-            }}
-            required className='border-2 border-emerald-500 rounded-full bg-transparent lg:mt-5 mt-15 outline-none text-xl py-3 px-5 placeholder:text-gray-500 active:scale-95   hover:bg-pink-200' type="password" placeholder='Enter password' />
-          <button className='border-none lg:mt-15 mt-30 bg-emerald-500 rounded-full  text-white outline-none font-bold text-xl py-2 px-8 cursor-pointer active:scale-50 hover:bg-pink-300 hover:text-pink-100 ' >Log in</button>
+            onChange={(e) => setpassword(e.target.value)}
+            required
+            className='w-full mb-6 
+            bg-white/10 border border-white/20 
+            rounded-full px-5 py-3 text-white text-base sm:text-lg
+            placeholder:text-white/50 
+            focus:outline-none focus:ring-2 focus:ring-emerald-400
+            transition-all duration-300'
+            type="password"
+            placeholder='Enter password'
+          />
+
+          {/* Button */}
+          <button
+            className='w-full 
+            bg-linear-to-r from-emerald-400 to-emerald-600 
+            rounded-full text-white font-semibold 
+            py-3 text-base sm:text-lg
+            hover:scale-105 hover:shadow-lg 
+            transition-all duration-300 active:scale-95'>
+            Log in
+          </button>
+
         </form>
       </div>
-
-
     </div>
   )
 }
