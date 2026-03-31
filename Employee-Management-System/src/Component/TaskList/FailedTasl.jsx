@@ -8,7 +8,7 @@ const FailedTasl = ({data}) => {
 }}>
         <div className='flex justify-between items-center'>
              <h3 className=' text-sm px-3 py-1 rounded bg-linear-to-br from-red-300 via-red-600 active:scale-90'>{data. title}</h3>
-             <h4 className='text-sm bg-transparent'>DD-MM-YY</h4>
+             <h4 className='text-sm bg-transparent'>{data.date}</h4>
         </div>
         <h2 className='lg:mt-5 mt-1 text-2xl font-semibold'>{data.category}</h2>
         <p className='text-sm mt-1 lg:mt-3 md:line-clamp-none wrap-break-word line-clamp-3'>{data.description}</p>
