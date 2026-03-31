@@ -15,31 +15,45 @@ const CreateTask = () => {
     const [category, setcategory] = useState('')
     const [newtask, setnewtask] = useState({})
 
-    const submitHandler = (e) =>{
-        e.preventDefault()
-       setnewtask({taskDate,taskDescription,taskTitle,asignTo,category,active:false,newTask:true,failed:false,completed:false})
+   const submitHandler = (e) => {
+  e.preventDefault()
 
-       const data = userData
+  const task = {
+  title: taskTitle,
+  description: taskDescription,
+  date: taskDate,
+  asignTo,
+  category,
+  active: false,
+  newTask: true,
+  failed: false,
+  completed: false
+}
 
-       userData.forEach(function(elem){
-        if (asignTo == elem.firstName){
-            elem.tasks.push(newtask)
-            elem. taskCount.newTask = elem. taskCount.newTask+1
-           
-            
+  const data = userData.map((elem) => {
+    if (asignTo === elem.firstName) {
+      return {
+        ...elem,
+        tasks: [...elem.tasks, task],
+        taskCount: {
+          ...elem.taskCount,
+          newTask: elem.taskCount.newTask + 1
         }
-       })
-       setLocalStorage(data)
-      
-        setasignTo('')
-        setcategory('')
-        settaskTitle('')
-        settaskDate('')
-        settaskDescription('')
-
-
-        
+      }
     }
+    return elem
+  })
+
+  setuserData(data)   // 🔥 VERY IMPORTANT
+  setLocalStorage(data)
+
+  // reset form
+  setasignTo('')
+  setcategory('')
+  settaskTitle('')
+  settaskDate('')
+  settaskDescription('')
+}
   return (
     <div className='p-4 md:p-6 bg-[#1c1c1c] mt-10 md:mt-10 rounded-2xl'>
                 <form onSubmit={(e)=>{
