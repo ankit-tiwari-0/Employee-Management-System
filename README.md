@@ -5,6 +5,7 @@ This app helps manage employee tasks efficiently with a clean UI and smooth user
 
 ---
 
+
 ## ✨ Features
 
 * 👤 User Login System
@@ -15,6 +16,10 @@ This app helps manage employee tasks efficiently with a clean UI and smooth user
 * ⚡ Fast performance using Vite
 
 ---
+📸 Screenshots
+<img width="1901" height="1021" alt="image" src="https://github.com/user-attachments/assets/122cca27-f07c-4701-aa61-c7a002261997" />
+
+
 
 ## 🛠️ Tech Stack
 
