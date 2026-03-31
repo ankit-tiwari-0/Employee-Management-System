@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Alltask from './Alltask'
+import { setLocalStorage } from '../../utils/localstorage'
+import { Authcontext } from '../../Context/AuthProvider'
 
 const CreateTask = () => {
+
+   const [userData,setuserData] = useContext(Authcontext)
+ 
+
     const [taskTitle, settaskTitle] = useState('')
     const [taskDescription, settaskDescription] = useState('')
     const [taskDate, settaskDate] = useState('')
@@ -13,16 +19,18 @@ const CreateTask = () => {
         e.preventDefault()
        setnewtask({taskDate,taskDescription,taskTitle,asignTo,category,active:false,newTask:true,failed:false,completed:false})
 
-       const data = JSON.parse(localStorage.getItem('employees'))
+       const data = userData
 
-       data.forEach(function(elem){
+       userData.forEach(function(elem){
         if (asignTo == elem.firstName){
             elem.tasks.push(newtask)
+            elem. taskCount.newTask = elem. taskCount.newTask+1
            
             
         }
        })
-       localStorage.setItem('employees',JSON.stringify(data))
+       setLocalStorage(data)
+      
         setasignTo('')
         setcategory('')
         settaskTitle('')

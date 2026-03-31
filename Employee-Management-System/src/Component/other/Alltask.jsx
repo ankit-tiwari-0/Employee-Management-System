@@ -13,7 +13,7 @@ const Alltask = () => {
   <h5 className='flex-1 px-2 text-[12px] lg:text-[20px] text-center font-bold'>Fail</h5>
 </div>
       <div>
-        {userData.employees.map(function (elem, idx) {
+        {userData.map(function (elem, idx) {
           return <div key={idx} className='border-2 border-emerald-500 py-2 px-2 flex items-center rounded-xl whitespace-nowrap mb-4'>
   <h2 className='flex-1 px-2 text-[15px] lg:text-[20px] font-medium text-center'>{elem.firstName}</h2>
   <h3 className='flex-1 px-2 text-blue-600 text-[11px] lg:text-[20px] text-center font-medium'> {elem.taskCount.newTask}</h3>
