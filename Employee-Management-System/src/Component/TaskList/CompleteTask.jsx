@@ -4,10 +4,10 @@ const CompleteTask = ({data}) => {
   return (
     <div className='  shadow-2xl shrink-0 lg:h-full h-50 lg:w-80 w-full p-5 rounded-xl'
      style={{
-         background: "linear-gradient(135deg, #3b82f6, #06b6d4, #6366f1, #a855f7, #ec4899)"
-       }}>
+  background: "linear-gradient(135deg, #3b82f6, #6366f1, #a855f7)"
+}}>
         <div className='flex justify-between items-center'>
-             <h3 className=' text-sm px-3 py-1 rounded bg-red-600 active:scale-90'>{data.category}</h3>
+             <h3 className=' text-sm px-3 py-1 rounded bg-linear-to-br from-red-300 via-red-600 to-yellow-800 active:scale-90'>{data.category}</h3>
              <h4 className='text-sm bg-transparent'>{data.date}</h4>
         </div>
         <h2 className='lg:mt-5 mt-1 text-2xl font-semibold'>{data.title}</h2>

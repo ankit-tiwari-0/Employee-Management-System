@@ -7,7 +7,7 @@ const TaskList = ({data}) => {
        {/* New Task */}
        <div 
        className='rounded-2xl w-[35%] py-6 px-9 active:scale-95 
-       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
+       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-lg border border-white/20'
        style={{
          background: "linear-gradient(135deg, #ef4444, #ec4899, #8b5cf6, #f97316, #eab308)"
        }}>
@@ -22,7 +22,7 @@ const TaskList = ({data}) => {
        {/* Completed */}
        <div 
        className='rounded-2xl w-[35%] py-6 px-5 active:scale-95 
-       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
+       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 bg-white/10 backdrop-blur-3xl border border-white/20'
        style={{
          background: "linear-gradient(135deg, #3b82f6, #06b6d4, #6366f1, #a855f7, #ec4899)"
        }}>

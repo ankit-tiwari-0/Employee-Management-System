@@ -7,7 +7,7 @@ const NewTask = ({data}) => {
          background: "linear-gradient(135deg, #ef4444, #ec4899, #8b5cf6, #f97316, #eab308)"
        }}>'>
         <div className='flex justify-between items-center'>
-             <h3 className=' text-sm px-3 py-1 rounded bg-red-600 active:scale-90'>{data.category}</h3>
+             <h3 className=' text-sm px-3 py-1 rounded bg-linear-to-br from-red-300 via-red-600 to-yellow-800 active:scale-90 transition-all duration-200'>{data.category}</h3>
              <h4 className='text-sm bg-transparent'>{data.date}</h4>
         </div>
         <h2 className='lg:mt-5 mt-1 text-2xl font-semibold'>{data.category}</h2>
