@@ -2,23 +2,68 @@ import React from 'react'
 
 const TaskList = ({data}) => {
   return (
-    <div className='flex flex-wrap lg:flex-nowrap mt-10 justify-between gap-5 screen '>
-       <div className='rounded-xl w-[35%] py-6 px-9 active:scale-90 bg-red-950'>
-           <h2 className='text-3xl font-semibold'>{data.taskCount.newTask}</h2>
-             <h3 className='text-sm lg:text-2xl font-medium'>New task</h3>
+    <div className='flex flex-wrap lg:flex-nowrap mt-10 justify-between gap-5 screen'>
+
+       {/* New Task */}
+       <div 
+       className='rounded-2xl w-[35%] py-6 px-9 active:scale-95 
+       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
+       style={{
+         background: "linear-gradient(135deg, #ef4444, #ec4899, #8b5cf6, #f97316, #eab308)"
+       }}>
+           <h2 className='text-4xl font-extrabold drop-shadow-lg'>
+             {data.taskCount.newTask}
+           </h2>
+           <h3 className='text-sm lg:text-2xl font-medium text-white/80 mt-2'>
+             New Task
+           </h3>
        </div>
-       <div className='rounded-xl w-[35%] py-5 px-5 active:scale-90  bg-blue-600'>
-           <h2 className='text-3xl font-semibold'>{data.taskCount.completed}</h2>
-             <h3 className='text-sm  lg:text-2xl  font-medium'>Completed Task</h3>
+
+       {/* Completed */}
+       <div 
+       className='rounded-2xl w-[35%] py-6 px-5 active:scale-95 
+       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
+       style={{
+         background: "linear-gradient(135deg, #3b82f6, #06b6d4, #6366f1, #a855f7, #ec4899)"
+       }}>
+           <h2 className='text-4xl font-extrabold drop-shadow-lg'>
+             {data.taskCount.completed}
+           </h2>
+           <h3 className='text-sm lg:text-2xl font-medium text-white/80 mt-2'>
+             Completed Task
+           </h3>
        </div>
-       <div className='rounded-xl w-[35%] py-6 px-5 active:scale-90 bg-[#6A994E]'>
-           <h2 className='text-3xl font-semibold'>{data.taskCount.active}</h2>
-             <h3 className='text-sm  lg:text-2xl font-medium'>Accepted Task</h3>
+
+       {/* Active */}
+       <div 
+       className='rounded-2xl w-[35%] py-6 px-5 active:scale-95 
+       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
+       style={{
+         background: "linear-gradient(135deg, #22c55e, #84cc16, #10b981, #14b8a6, #06b6d4)"
+       }}>
+           <h2 className='text-4xl font-extrabold drop-shadow-lg'>
+             {data.taskCount.active}
+           </h2>
+           <h3 className='text-sm lg:text-2xl font-medium text-white/80 mt-2'>
+             Accepted Task
+           </h3>
        </div>
-       <div className='rounded-xl w-[35%] py-6 px-6 active:scale-90 bg-[#FFD93D]'>
-           <h2 className='text-3xl font-semibold'>{data.taskCount.failed}</h2>
-             <h3 className='text-l lg:text-2xl font-medium'>Failed Task</h3>
+
+       {/* Failed */}
+       <div 
+       className='rounded-2xl w-[35%] py-6 px-6 active:scale-95 
+       text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300'
+       style={{
+         background: "linear-gradient(135deg, #facc15, #fb923c, #f87171, #ec4899, #8b5cf6)"
+       }}>
+           <h2 className='text-4xl font-extrabold drop-shadow-lg'>
+             {data.taskCount.failed}
+           </h2>
+           <h3 className='text-sm lg:text-2xl font-medium text-white/80 mt-2'>
+             Failed Task
+           </h3>
        </div>
+
     </div>
   )
 }
