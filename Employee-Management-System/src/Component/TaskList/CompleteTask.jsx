@@ -13,8 +13,8 @@ const CompleteTask = ({data}) => {
         <h2 className='lg:mt-5 mt-1 text-2xl font-semibold'>{data.title}</h2>
         <p className='text-sm mt-1 lg:mt-3 md:line-clamp-none wrap-break-word line-clamp-3'>{data.description}</p>
         <div className=' lg:mt-15 m-4 flex justify-center items-center mt-6'>
-          <button className=" px-5 py-1 rounded-xl text-white font-semibold text-xl hover:bg-white hover:text-pink-500 transition-all duration-200 active:scale-95">
-    Complete
+          <button className=" px-5 py-1 rounded-xl text-white font-semibold text-xl hover:bg-white hover:text-pink-500 transition-all duration-200 active:scale-95 bg-linear-to-br from-grey-300 via-gyry-600 to-yellow-800">
+    Completed
   </button>
         </div>
         </div> 
