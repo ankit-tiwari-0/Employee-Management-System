@@ -8,7 +8,7 @@ import { Authcontext } from './Context/AuthProvider'
 const App = () => {
   const [user, setuser] = useState(null)
   const [loggedInUser, setloggedInUser] = useState(null)
-  const authdata = useContext(Authcontext)
+  const [authdata] = useContext(Authcontext)
  
 //   useEffect(() => {
 //   const storedUser = localStorage.getItem("loggedInUserss")

@@ -18,10 +18,11 @@ const CreateTask = () => {
        data.forEach(function(elem){
         if (asignTo == elem.firstName){
             elem.tasks.push(newtask)
-            console.log(elem);
+           
             
         }
        })
+       localStorage.setItem('employees',JSON.stringify(data))
         setasignTo('')
         setcategory('')
         settaskTitle('')
