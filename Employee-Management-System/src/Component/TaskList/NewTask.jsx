@@ -2,7 +2,10 @@ import React from 'react'
 
 const NewTask = ({data}) => {
   return (
-    <div className='shrink-0 lg:h-full h-50 lg:w-80 w-full p-5 bg-teal-400 rounded-xl'>
+    <div className='shrink-0 lg:h-full h-50 lg:w-80 w-full p-5 rounded-xl
+    style={{
+         background: "linear-gradient(135deg, #ef4444, #ec4899, #8b5cf6, #f97316, #eab308)"
+       }}>'>
         <div className='flex justify-between items-center'>
              <h3 className=' text-sm px-3 py-1 rounded bg-red-600 active:scale-90'>{data.category}</h3>
              <h4 className='text-sm bg-transparent'>{data.date}</h4>

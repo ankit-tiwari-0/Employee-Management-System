@@ -2,10 +2,13 @@ import React from 'react'
 
 const AcceptTask = ({data}) => {
   return (
-    <div className='shrink-0 lg:h-full h-50 lg:w-80 w-full p-5 bg-[#FF9F1C] rounded-xl'>
+    <div className='shrink-0 lg:h-full h-50 lg:w-80 w-full p-5 rounded-xl'
+           style={{
+         background: "linear-gradient(135deg, #22c55e, #84cc16, #10b981, #14b8a6, #06b6d4)"
+       }}>
         <div className='flex justify-between items-center'>
              <h3 className=' text-sm px-3 py-1 rounded bg-red-600 active:scale-90'>{data.category}</h3>
-             <h4 className='text-sm bg-transparent'>{data.date}</h4>
+             <h4 className='text-sm bg-transparent '>{data.date}</h4>
         </div>
         <h2 className='lg:mt-5 mt-1 text-2xl font-semibold'>{data.title}</h2>
         <p className='text-sm mt-1 lg:mt-3 md:line-clamp-none wrap-break-word line-clamp-3'>{data.description}</p>

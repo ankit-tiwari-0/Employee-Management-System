@@ -2,7 +2,10 @@ import React from 'react'
 
 const CompleteTask = ({data}) => {
   return (
-    <div className='shrink-0 lg:h-full h-50 lg:w-80 w-full p-5 bg-pink-400 rounded-xl'>
+    <div className='  shadow-2xl shrink-0 lg:h-full h-50 lg:w-80 w-full p-5 rounded-xl'
+     style={{
+         background: "linear-gradient(135deg, #3b82f6, #06b6d4, #6366f1, #a855f7, #ec4899)"
+       }}>
         <div className='flex justify-between items-center'>
              <h3 className=' text-sm px-3 py-1 rounded bg-red-600 active:scale-90'>{data.category}</h3>
              <h4 className='text-sm bg-transparent'>{data.date}</h4>

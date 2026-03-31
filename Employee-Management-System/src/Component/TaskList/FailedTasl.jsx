@@ -2,7 +2,10 @@ import React from 'react'
 
 const FailedTasl = ({data}) => {
   return (
-      <div className='shrink-0 lg:h-full h-50 lg:w-80 w-full p-5 bg-purple-400 rounded-xl'>
+      <div className='shrink-0 lg:h-full h-50 lg:w-80 w-full p-5 rounded-xl
+      style={{
+         background: "linear-gradient(135deg, #facc15, #fb923c, #f87171, #ec4899, #8b5cf6)"
+       }}'>
         <div className='flex justify-between items-center'>
              <h3 className=' text-sm px-3 py-1 rounded bg-red-600 active:scale-90'>{data. title}</h3>
              <h4 className='text-sm bg-transparent'>DD-MM-YY</h4>
